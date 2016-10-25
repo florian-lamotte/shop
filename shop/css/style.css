@@ -1,0 +1,139 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html, body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 100px;
+  background-image: url('../images/bg_body.jpg');
+}
+footer {
+  padding: 10px 0;
+}
+
+/* NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+/* SIDEBAR
+-------------------------------------------------- */
+
+#sidebar {
+  position:fixed;
+  width:15%;
+  padding:0;
+  margin:0 0 0 2%;
+}
+
+#sidebar > ul > li > a {
+  background-color: #3c3c3c;
+  color:white;
+  border-radius: 5px;
+  padding:10px;
+  border:0;
+}
+
+/* CONTENT
+-------------------------------------------------- */
+
+.jumbotron {
+  background-color: #3c3c3c;
+  color:white;
+}
+
+/* dernières parutions en page d'accueil */
+.parutions {
+  height:250px;
+  margin:20px 0 20px 0;
+}
+
+/* couvertures des livres */
+.couverture {
+  width:150px;
+  height:auto;
+  box-shadow: 4px 4px 4px black; 
+}
+
+.fiche_livre {
+  border-radius:5px;
+  background-color:#3c3c3c;
+  height:300px;
+  margin-bottom:30px;
+  color:white;
+  padding:0;
+}
+
+.fiche_livre div {
+  padding:20px 20px 0 20px;
+}
+
+.fiche_livre a {
+  color:white;
+}
+
+/* menu des auteurs */
+.dropdown-menu {
+  position:relative;
+  float:none;
+  width:50%;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
